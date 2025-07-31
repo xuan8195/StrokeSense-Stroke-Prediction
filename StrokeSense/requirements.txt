@@ -1,0 +1,32 @@
+# ==========================
+# STREAMLIT AND WEB FRAMEWORK
+# ==========================
+streamlit==1.38.0
+
+# ==========================
+# DATA MANIPULATION AND ANALYSIS
+# ==========================
+pandas==2.0.3
+numpy==1.25.0
+
+# ==========================
+# MACHINE LEARNING
+# ==========================
+scikit-learn==1.3.0
+
+# ==========================
+# DATA VISUALIZATION
+# ==========================
+plotly==5.15.0
+
+# ==========================
+# UI COMPONENTS AND ANIMATIONS
+# ==========================
+streamlit-lottie==0.0.5
+
+# ==========================
+# ADDITIONAL NOTES
+# ==========================
+# json - Built-in Python library for JSON handling
+# time - Built-in Python library for time operations
+# threading - Built-in Python library (used by streamlit internally)
