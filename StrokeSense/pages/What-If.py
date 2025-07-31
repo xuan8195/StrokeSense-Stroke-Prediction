@@ -300,6 +300,39 @@ with col2:
     
     # Predict new risk with modified inputs
     modified_inputs = previous_inputs.copy()
+    
+    # Update modified_inputs based on UI changes
+    # BMI Category updates
+    if bmi < 18.5:
+        modified_inputs["bmi_category_Normal weight"] = 0
+        modified_inputs["bmi_category_Obese"] = 0
+    elif 18.5 <= bmi < 25:
+        modified_inputs["bmi_category_Normal weight"] = 1
+        modified_inputs["bmi_category_Obese"] = 0
+    elif 25 <= bmi < 30:
+        modified_inputs["bmi_category_Normal weight"] = 0
+        modified_inputs["bmi_category_Obese"] = 0
+    else:  # Obese
+        modified_inputs["bmi_category_Normal weight"] = 0
+        modified_inputs["bmi_category_Obese"] = 1
+    
+    # Smoking status update
+    if smoking_status == "Non-smoker":
+        modified_inputs["smoking_status"] = 0
+    else:
+        modified_inputs["smoking_status"] = 1
+    
+    # Stress level update
+    if stress_level == "Low Stress":
+        modified_inputs["stress_level_Low Stress"] = 1
+        modified_inputs["stress_level_Moderate Stress"] = 0
+    elif stress_level == "Moderate Stress":
+        modified_inputs["stress_level_Low Stress"] = 0
+        modified_inputs["stress_level_Moderate Stress"] = 1
+    else:  # High Stress
+        modified_inputs["stress_level_Low Stress"] = 0
+        modified_inputs["stress_level_Moderate Stress"] = 0
+    
     input_df = build_feature_vector(modified_inputs, feature_order)
     y_probs = model.predict_proba(input_df)[:, 1]
     risk_percentage = y_probs[0] * 100
@@ -465,8 +498,20 @@ with col2:
     else:
         st.success("🌟 You're making excellent lifestyle choices! Keep up the great work!")
         # show lottie animation for tips
-        tips_animation = load_lottie_file("../assets/tips.json")
-        st_lottie(tips_animation, height=500, key="tips_animation")
+    tips_animation = load_lottie_file("../assets/tips.json")
+    st_lottie(tips_animation, height=500, key="tips_animation")
+    
+    col1, col2 = st.columns([1, 1])# Back button to return to input page or results page
+    with col1:
+        if st.button("Back to Input Page", key="back_to_input"):
+            st.switch_page("pages/Input.py")
+
+    with col2:
+        if st.button("Back to Results Page", key="back_to_results"):
+            st.switch_page("pages/Results.py")
+            
+            
+            
 
 # ==========================
 # FOOTER
