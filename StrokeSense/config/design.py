@@ -39,7 +39,39 @@ def hero_section():
     # Add custom styling for the hero section layout
     st.markdown("""
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-        <style> 
+        <style>
+            /* Sidebar Navigation Styling */
+            .css-1d391kg .css-1v3fvcr {
+                font-size: 1rem !important;
+                font-weight: 500 !important;
+            }
+            
+            /* Streamlit sidebar navigation - multiple selectors for compatibility */
+            .css-1v3fvcr > div > a,
+            [data-testid="stSidebarNav"] a,
+            .css-1v3fvcr a,
+            .st-emotion-cache-1v3fvcr a {
+                font-size: 0.95rem !important;
+                font-weight: 500 !important;
+                padding: 6px 12px !important;
+                line-height: 1.2 !important;
+            }
+            
+            /* Sidebar navigation list items */
+            [data-testid="stSidebarNav"] li,
+            .css-1v3fvcr li,
+            .st-emotion-cache-1v3fvcr li {
+                font-size: 0.95rem !important;
+                margin: 2px 0 !important;
+            }
+            
+            /* Sidebar navigation container */
+            [data-testid="stSidebarNav"],
+            .css-1v3fvcr,
+            .st-emotion-cache-1v3fvcr {
+                font-size: 0.95rem !important;
+            }
+            
             .hero-container {
                 background: linear-gradient(135deg, #E8F8FA, #DFF8EB);
                 padding: 40px;
