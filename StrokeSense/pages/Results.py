@@ -16,7 +16,7 @@ import time
 # ==========================
 st.set_page_config(
     page_title="StrokeSense – Results",
-    page_icon="assets/icon.png",
+    page_icon="../assets/icon.png",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -35,7 +35,7 @@ st.title("Stroke Risk Prediction – Results")
 if "user_inputs" not in st.session_state:
     # Show error if no inputs are found
     st.error("No inputs found. Please go back and fill the form.")
-    no_data = load_lottie_file("assets/no_data_found.json")
+    no_data = load_lottie_file("../assets/no_data_found.json")
     st_lottie(no_data, height=350, key="no_data")
     if st.button("Go Back to Form", key="back_to_form"):
         st.switch_page("pages/Input.py")

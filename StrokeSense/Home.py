@@ -8,7 +8,7 @@ from streamlit_lottie import st_lottie
 # ==========================
 st.set_page_config(
     page_title="StrokeSense",  # Title of the app
-    page_icon="assets/icon.png",  # Icon for the app
+    page_icon="../assets/icon.png",  # Icon for the app
     layout="wide",  # Wide layout for better user experience
     initial_sidebar_state="expanded",  # Sidebar is expanded by default
 )
@@ -25,7 +25,7 @@ theme()  # Apply the app's theme
 hero_section()  # Display the hero section at the top of the page
 
 # Load the Lottie animation for the shield icon
-lottie_shield = load_lottie_file("assets/shield.json")
+lottie_shield = load_lottie_file("../assets/shield.json")
 
 # Hero section with a styled container
 with st.container():

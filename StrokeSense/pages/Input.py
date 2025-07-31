@@ -9,7 +9,7 @@ from config.design import input_design, hero_section, footer
 # ==========================
 st.set_page_config(
     page_title="StrokeSense - Input Form",
-    page_icon="assets/icon.png",
+    page_icon="../assets/icon.png",
     layout="wide",
     initial_sidebar_state="expanded",
 )

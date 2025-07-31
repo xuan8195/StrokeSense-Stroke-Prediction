@@ -36,7 +36,7 @@ def build_feature_vector(user_inputs, feature_order):
 # ==========================
 st.set_page_config(
     page_title="StrokeSense – What-If",
-    page_icon="assets/icon.png",
+    page_icon="../assets/icon.png",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -82,7 +82,7 @@ disclaimer()
 if "user_inputs" not in st.session_state:
     # Show error if no inputs are found
     st.error("No inputs found. Please go back and fill the form.")
-    no_data = load_lottie_file("assets/no_data_found.json")
+    no_data = load_lottie_file("../assets/no_data_found.json")
     st_lottie(no_data, height=350, key="no_data")
     if st.button("Go Back to Form", key="back_to_form"):
         st.switch_page("pages/Input.py")
@@ -465,7 +465,7 @@ with col2:
     else:
         st.success("🌟 You're making excellent lifestyle choices! Keep up the great work!")
         # show lottie animation for tips
-        tips_animation = load_lottie_file("assets/tips.json")
+        tips_animation = load_lottie_file("../assets/tips.json")
         st_lottie(tips_animation, height=500, key="tips_animation")
 
 # ==========================
