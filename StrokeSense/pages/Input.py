@@ -120,15 +120,15 @@ with st.container():
                 # --- Card 1: Personal Information ---
                 st.markdown(
                     f"""
-                    <div style='background-color:#f7fcfa;border-radius:10px;padding:1.2em 1.5em 1em 1.5em;margin-bottom:1em;border-left:5px solid #2ec4b6;box-shadow:0 2px 8px #e0e0e0;'>
-                    <h4 style='margin-top:0;margin-bottom:0.7em;color:#1a3c40;'>Personal Information</h4>
-                    <table style='width:100%;font-size:1.08em;'>
-                        <tr><td><b>Age</b></td><td>{age}</td></tr>
-                        <tr><td><b>Gender</b></td><td>{gender}</td></tr>
-                        <tr><td><b>Height</b></td><td>{height} cm</td></tr>
-                        <tr><td><b>Weight</b></td><td>{weight} kg</td></tr>
-                        <tr><td><b>BMI</b></td><td>{bmi}</td></tr>
-                    </table>
+                    <div style='background-color:#f7fcfa;border-radius:10px;padding:1em;margin-bottom:1em;border-left:4px solid #2ec4b6;box-shadow:0 2px 6px rgba(0,0,0,0.1);'>
+                    <h4 style='margin:0 0 0.5em 0;color:#1a3c40;font-size:1.1em;'>👤 Personal Information</h4>
+                    <div style='display:flex;flex-wrap:wrap;gap:0.8em;font-size:0.95em;'>
+                        <span style='background:#e8f5f2;padding:0.3em 0.6em;border-radius:15px;'><b>Age:</b> {age}</span>
+                        <span style='background:#e8f5f2;padding:0.3em 0.6em;border-radius:15px;'><b>Gender:</b> {gender}</span>
+                        <span style='background:#e8f5f2;padding:0.3em 0.6em;border-radius:15px;'><b>Height:</b> {height}cm</span>
+                        <span style='background:#e8f5f2;padding:0.3em 0.6em;border-radius:15px;'><b>Weight:</b> {weight}kg</span>
+                        <span style='background:#e8f5f2;padding:0.3em 0.6em;border-radius:15px;'><b>BMI:</b> {bmi:.1f}</span>
+                    </div>
                     </div>
                     """, unsafe_allow_html=True
                 )
@@ -136,13 +136,13 @@ with st.container():
                 # --- Card 2: Medical History ---
                 st.markdown(
                     f"""
-                    <div style='background-color:#f7faff;border-radius:10px;padding:1.2em 1.5em 1em 1.5em;margin-bottom:1em;border-left:5px solid #4361ee;box-shadow:0 2px 8px #e0e0e0;'>
-                    <h4 style='margin-top:0;margin-bottom:0.7em;color:#1a3c40;'>Medical History</h4>
-                    <table style='width:100%;font-size:1.08em;'>
-                        <tr><td><b>Hypertension</b></td><td>{hypertension}</td></tr>
-                        <tr><td><b>Heart Disease</b></td><td>{heart_disease}</td></tr>
-                        <tr><td><b>Diabetes</b></td><td>{diabetes}</td></tr>
-                    </table>
+                    <div style='background-color:#f7faff;border-radius:10px;padding:1em;margin-bottom:1em;border-left:4px solid #4361ee;box-shadow:0 2px 6px rgba(0,0,0,0.1);'>
+                    <h4 style='margin:0 0 0.5em 0;color:#1a3c40;font-size:1.1em;'>🏥 Medical History</h4>
+                    <div style='display:flex;flex-wrap:wrap;gap:0.8em;font-size:0.95em;'>
+                        <span style='background:#e8f0ff;padding:0.3em 0.6em;border-radius:15px;'><b>Blood Pressure:</b> {hypertension}</span>
+                        <span style='background:#e8f0ff;padding:0.3em 0.6em;border-radius:15px;'><b>Heart Disease:</b> {heart_disease}</span>
+                        <span style='background:#e8f0ff;padding:0.3em 0.6em;border-radius:15px;'><b>Diabetes:</b> {diabetes}</span>
+                    </div>
                     </div>
                     """, unsafe_allow_html=True
                 )
@@ -150,14 +150,14 @@ with st.container():
                 # --- Card 3: Lifestyle & Demographics ---
                 st.markdown(
                     f"""
-                    <div style='background-color:#f9f7fa;border-radius:10px;padding:1.2em 1.5em 1em 1.5em;margin-bottom:1em;border-left:5px solid #ffbe0b;box-shadow:0 2px 8px #e0e0e0;'>
-                    <h4 style='margin-top:0;margin-bottom:0.7em;color:#1a3c40;'>Lifestyle & Demographics</h4>
-                    <table style='width:100%;font-size:1.08em;'>
-                        <tr><td><b>Marital Status</b></td><td>{marital_status}</td></tr>
-                        <tr><td><b>Residence Type</b></td><td>{residence_type}</td></tr>
-                        <tr><td><b>Work Type</b></td><td>{work_type}</td></tr>
-                        <tr><td><b>Smoking Status</b></td><td>{smoking_status}</td></tr>
-                    </table>
+                    <div style='background-color:#fff9e6;border-radius:10px;padding:1em;margin-bottom:1.5em;border-left:4px solid #ffbe0b;box-shadow:0 2px 6px rgba(0,0,0,0.1);'>
+                    <h4 style='margin:0 0 0.5em 0;color:#1a3c40;font-size:1.1em;'>🏠 Lifestyle & Demographics</h4>
+                    <div style='display:flex;flex-wrap:wrap;gap:0.8em;font-size:0.95em;'>
+                        <span style='background:#fff5cc;padding:0.3em 0.6em;border-radius:15px;'><b>Married:</b> {marital_status}</span>
+                        <span style='background:#fff5cc;padding:0.3em 0.6em;border-radius:15px;'><b>Area:</b> {residence_type}</span>
+                        <span style='background:#fff5cc;padding:0.3em 0.6em;border-radius:15px;'><b>Work:</b> {work_type}</span>
+                        <span style='background:#fff5cc;padding:0.3em 0.6em;border-radius:15px;'><b>Smoking:</b> {smoking_status}</span>
+                    </div>
                     </div>
                     """, unsafe_allow_html=True
                 )

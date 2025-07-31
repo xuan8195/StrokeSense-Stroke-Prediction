@@ -26,8 +26,8 @@ st.set_page_config(
 # ==========================
 theme()  # Apply the theme
 app_background()  # Apply the background animation
-how_to_use_section()  # Display the "How to Use" section
-hero_section()
+how_to_use_section()
+hero_section()  # Display the hero section
 st.title("Stroke Risk Prediction – Results")
 
 # ==========================
@@ -365,6 +365,63 @@ with tab4:
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+st.markdown ("---") 
+
+st.markdown("""
+<div class="features">
+    <h3>Top 3 Features Influencing Your Stroke Risk</h3>
+    <div class="feature-card">
+        <span class="material-icons">calendar_today</span>
+        <h4>Age</h4>
+        <p>The risk of stroke increases with age, especially after 55.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">monitor_weight</span>
+        <h4>BMI</h4>
+        <p>Higher body mass index is associated with increased stroke risk.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">self_improvement</span>
+        <h4>Stress</h4>
+        <p>Chronic stress can lead to high blood pressure and other risk factors for stroke.</p>
+    </div>
+</div>
+
+<div class="features">
+    <h3>Recommendations to Reduce Stroke Risk</h3>
+    <div class="feature-card">
+        <span class="material-icons">restaurant</span>
+        <h4>Healthy Diet</h4>
+        <p>Incorporate more fruits, vegetables, and whole grains into your meals.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">directions_run</span>
+        <h4>Exercise</h4>
+        <p>Aim for at least 30 minutes of moderate physical activity daily.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">smoke_free</span>
+        <h4>Quit Smoking</h4>
+        <p>If you smoke, consider quitting. Seek support groups or medical advice.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">spa</span>
+        <h4>Stress Management</h4>
+        <p>Practice mindfulness or meditation to reduce stress levels.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">medical_services</span>
+        <h4>Regular Checkups</h4>
+        <p>Monitor your blood pressure, cholesterol, and glucose levels regularly.</p>
+    </div>
+    <div class="feature-card">
+        <span class="material-icons">local_drink</span>
+        <h4>Reduce Drinking</h4>
+        <p>If you drink alcohol, consider reducing your intake or quitting altogether.</p>
+    </div>  
+</div>
+""", unsafe_allow_html=True)
 
 # ==========================
 # FOOTER AND NAVIGATION
