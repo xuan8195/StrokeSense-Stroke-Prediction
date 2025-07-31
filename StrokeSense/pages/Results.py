@@ -378,7 +378,7 @@ st.markdown("""
     </div>
     <div class="feature-card">
         <span class="material-icons">monitor_weight</span>
-        <h4>BMI</h4>
+        <h4>Obesity</h4>
         <p>Higher body mass index is associated with increased stroke risk.</p>
     </div>
     <div class="feature-card">
