@@ -2,7 +2,7 @@ import numpy as np
 import streamlit as st
 import pandas as pd
 from config.theme import theme, app_background
-from config.design import disclaimer, how_to_use_section, load_lottie_file, footer
+from config.design import disclaimer, hero_section, how_to_use_section, load_lottie_file, footer
 from utils.model import load_model_and_features
 from sklearn.impute import SimpleImputer
 
@@ -27,6 +27,7 @@ st.set_page_config(
 theme()  # Apply the theme
 app_background()  # Apply the background animation
 how_to_use_section()  # Display the "How to Use" section
+hero_section()
 st.title("Stroke Risk Prediction – Results")
 
 # ==========================
